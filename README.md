@@ -1,11 +1,7 @@
-# ![yesterpage logo](icon32.png) yesterpage
+# ![yesterpage logo](yesterpage/icon32.png) yesterpage
 
 __yesterpage__ is a WebExtension that works for Chrome/Chromium and (soon!) Firefox that keeps track of your browsing
 history in a branching tree.
-
-<p align="center">
-<img src="https://github.com/boramalper/yesterpage/blob/master/yesterpage-ss.png?raw=true" alt="yesterpage screenshot"/>
-</p>
 
 The way we humans seek information does not strictly adheres to the
 [Standard Boolean model](https://en.wikipedia.org/wiki/Standard_Boolean_model) that consist of a chain of boolean
@@ -19,6 +15,10 @@ statements, but more of
 > retrieval can be bit by bit. Bates gives a number of examples. For instance, a user may look through footnotes and
 > follow these sources. Or, a user may scan through recent journal articles on the topic. In each case, the user's
 > question may change and thus the search evolves.
+
+<p align="center">
+<img src="https://github.com/boramalper/yesterpage/blob/master/yesterpage-ss.png?raw=true" alt="yesterpage screenshot"/>
+</p>
 
 __yesterpage__ is intended to support and encourage _Berrypicking_ model by keeping track of all the webpages you have
 been in a dendroid form that denotes whence you arrived a page and whither you proceeded.
