@@ -70,7 +70,7 @@ function main(currentTab) {
                 useBorderWithImage: true
             },
             image: currentPage.getAttribute("favIconUrl"),
-            brokenImage: "chrome://favicon/" + currentPage.getAttribute("url"),
+            brokenImage: detectBrowser() === "chrome" ? "chrome://favicon/" + currentPage.getAttribute("url")  : "../assets/default-favicon.png",
             size: 16,
             color: {
                 border: "#F2F2F2",
@@ -134,4 +134,17 @@ function truncateString(str, maxLength) {
     }
 
     return str.slice(0, maxLength - 3) + "...";
+}
+
+
+function detectBrowser() {
+     if (typeof InstallTrigger !== 'undefined') {
+         return "firefox";
+     }
+     else if (!!window.chrome && !!window.chrome.webstore) {
+         return "chrome";
+     }
+     else {
+         return "undefined";
+     }
 }

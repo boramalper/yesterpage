@@ -136,7 +136,7 @@ function registerTab(tab_t) {
 /*
  * Listens to print debug messages when a tab is replaced.
 **/
-chrome.webNavigation.onTabReplaced.addListener(function(details) {
+chrome.tabs.onReplaced.addListener(function(details) {
     console.debug("Tab #%d is replaced with tab #%d!", details.replacedTabId, details.tabId);
 });
 
@@ -151,7 +151,7 @@ chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
 
     // TODO: explain why there is timeout?
     window.setTimeout(function() {
-        commit(details);
+        commitPage(details);
     }, 1500);
 });
 
