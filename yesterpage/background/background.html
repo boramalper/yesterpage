@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>background - yesterpage</title>
+    <script defer src="background.js"></script>
+</head>
+
+<body>
+    <!-- THE STURCTURE
+
+        The structure of the DOM-stored data is as follows:
+            tabs
+                tab[id]
+                    page[id, title, url, favIconUrl]
+                        page[id, title, url, favIconUrl]
+                            page[id, title, url, favIconUrl]
+                            ...
+                        page[id, title, url, favIconUrl]
+                        ...
+                tab[id]
+                ...
+
+        In other words,
+        * `tabs` may contain `tab`s that have an id that is equal to the id of the tab they represent as given in the
+          `chrome.tabs`.
+        * Each `tab` contains only one and one page that has an `id` (tab-local serial integer), `title` (might be empty
+          string), `url`, and a `favIconUrl` (might be empty string).
+        * Each `page` may contain multiple other `page`s. The hierarchical structure means that a child `page` is
+          visited from/after the parent `page`.
+    -->
+    <tabs></tabs>
+</body>
+</html>

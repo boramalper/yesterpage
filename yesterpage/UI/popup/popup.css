@@ -1,0 +1,45 @@
+html, body {
+  width: 800px;
+  height: 600px;
+}
+
+body {
+  font-family: "Helvetica", "Arial", Tahoma, sans-serif;
+  font-size: 100%;
+  background-color: #F2F2F2;
+}
+
+#footer {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#history-graph {
+    margin: 1em 1em 0.5em 1em;
+    width: calc(100% - 2 * (1em) - 2 * (2px));
+    height: calc(100% - (0.5em) - 2 * (1em));
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h1 sup {
+    font-size: small;
+    vertical-align: super;
+}
+
+#footer a {
+    color: inherit;
+}
+
+img {
+  width: inherit;
+}
